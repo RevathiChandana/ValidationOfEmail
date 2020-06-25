@@ -12,3 +12,14 @@ print_valid_First_name()
         fi
 }
 print_valid_First_name $first_name
+read -p " enter a valid last name : " last_name
+print_valid_last_name()
+{
+        if [[ $1 =~ ^([A-Z]{1}+[a-z0-9]{3,})$ ]]
+        then
+                echo "last name is validate."
+        else
+                echo "last name is not validate."
+        fi
+}
+print_valid_last_name $last_name
