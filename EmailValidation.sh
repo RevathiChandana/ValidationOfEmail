@@ -34,3 +34,14 @@ print_valid_email_id()
         fi
 }
 print_valid_email_id $email_id
+read -p " enter mobile number using format  : " mobile_number
+valid_mobile_number()
+{
+        if [[ $1 =~ ^([+]{1}[91]{2}[[:space:]][0-9]{10})$ ]]
+        then
+                echo "valid mobile number"
+        else
+                echo "not a valid mobile number."
+        fi
+}
+valid_mobile_number $mobile_number
